@@ -1,16 +1,17 @@
 {
   "name": "ffmpeg-static",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "ffmpeg static binaries for Mac OSX and Linux and Windows",
   "main": "index.js",
   "files": [
     "index.js",
-    "bin"
+    "bin",
+    "build"
   ],
   "scripts": {
     "build": "./build/index.sh",
     "test": "node_modules/.bin/tape test/*.js",
-    "prepublishOnly": "npm run build && npm test"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
